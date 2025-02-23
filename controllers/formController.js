@@ -1,13 +1,20 @@
-const asynchanlder = require("express-async-handler");
+const asyncHandler = require("express-async-handler");
 const messages = require("./../models/messages");
 
 const formController = {
-  get: asynchanlder(async (req, res) => {
+  get: asyncHandler(async (req, res) => {
     res.render("messageForm");
   }),
-  post: asynchanlder(async (req, res) => {
-    console.log(req.body);
-    res.send(201);
+
+  post: asyncHandler(async (req, res) => {
+    const data = req.body;
+    messages.push({
+      text: data.user_message,
+      user: data.user_name,
+      added: new Date(),
+    });
+    res.status(201).redirect("/");
   }),
 };
+
 module.exports = formController;
