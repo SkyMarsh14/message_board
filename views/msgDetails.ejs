@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/index.css" />
     <title>Message Details</title>
   </head>
   <body>
     <%- include('header') %>
-    <div class="user"><%=message.user %></div>
-    <div class="text"><%=message.text %></div>
-    <div clas="added"><%=message.added %></div>
+    <div class="inbox">
+      <h2>Message Detail</h2>
+      <div class="user">User: <%=message.user %></div>
+      <div class="text">Message: <%=message.text %></div>
+      <div clas="added">Posted Date: <%=message.added %></div>
+    </div>
   </body>
 </html>

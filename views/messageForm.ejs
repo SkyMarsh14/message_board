@@ -1,8 +1,24 @@
-<%- include('header') %>
-<form action="/new" method="POST">
-  <label for="name">User name:</label>
-  <input type="text" id="name" name="user_name" />
-  <label for="msg">Message:</label>
-  <input type="text" id="msg" name="user_message" />
-  <button type="submit">Post</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/reset.css">
+  <title>Message form</title>
+</head>
+<body>
+  <%- include('header') %>
+  <form action="/new" method="POST">
+    <div class="inputSection">
+      <label for="name">User name:</label>
+      <input type="text" id="name" name="user_name" />
+    </div>
+    <div class="inputSection">
+      <label for="msg">Message:</label>
+      <input type="text" id="msg" name="user_message" />
+    </div>
+    <button type="submit">Post</button>
+</body>
+</html>
 </form>
