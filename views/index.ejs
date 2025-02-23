@@ -6,6 +6,7 @@
     <title>Message Board</title>
   </head>
   <body>
-    <h1><%=locals.messages[0].text %> Page</h1>
+    <h1>Message Board Page</h1>
+    <%- include('inbox',{messages:messages}) %>
   </body>
 </html>

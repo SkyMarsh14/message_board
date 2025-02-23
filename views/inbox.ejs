@@ -1,0 +1,11 @@
+<section>
+  <ul>
+    <% for(let i=0;i<messages.length;i++){ %>
+        <li>
+            <div class="user"><%=messages[i].user %></div>
+            <div class="text"><%=messages[i].text %></div>
+            <div class="inputDate"><%=messages[i].added %></div>
+        </li>
+    <% } %> 
+  </ul>
+</section>
