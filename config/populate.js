@@ -20,7 +20,6 @@ VALUES
 
 async function main() {
   console.log("Seeding database...");
-
   const client = new Client({
     connectionString: argv[2],
   });
