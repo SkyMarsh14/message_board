@@ -19,10 +19,10 @@ app.use("/details", detailsRouter);
 
 app.use((err, req, res, next) => {
   console.log(err);
-  res.sendStatus(500).send(err);
+  res.status(500).send(err);
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`You started an express app. Listening to the PORT : ${PORT}`);
 });
