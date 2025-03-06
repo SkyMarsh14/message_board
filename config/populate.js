@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS messages (
 
 INSERT INTO messages (username, text) 
 VALUES
-  ('Bryan', 'How\\'s it going?'),
+  ('Bryan', 'How''s it going?'),
   ('Odin', 'Hello, world!'),
   ('Damon', 'Another day, another message.');
 `;
