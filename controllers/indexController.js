@@ -1,7 +1,8 @@
 const asynchanlder = require("express-async-handler");
-const messages = require("./../models/messages");
+const query = require("./../db/queries");
 const indexController = {
   index: asynchanlder(async (req, res) => {
+    const messages = await query.getAllMessages();
     res.render("index", { messages });
   }),
 };

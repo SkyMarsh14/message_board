@@ -1,5 +1,5 @@
-import query from "./../db/queries";
-
+const query = require("./../db/queries");
+const asyncHandler = require("express-async-handler");
 const formController = {
   get: asyncHandler(async (req, res) => {
     res.render("messageForm");
