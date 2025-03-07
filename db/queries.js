@@ -1,9 +1,9 @@
 const pool = require("./pool");
 
-async function addUser(user, text, added) {
+async function addUser(user, text) {
   return await pool.query(
-    "INSERT INTO messages (username, text, added) VALUES ($1, $2, $3)",
-    [user, text, added]
+    "INSERT INTO messages (username, text) VALUES ($1, $2)",
+    [user, text]
   );
 }
 async function getAllMessages() {

@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const { Client } = require("pg");
+const { argv } = require("node:process");
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
@@ -19,9 +20,8 @@ VALUES
 
 async function main() {
   console.log("Seeding database...");
-
   const client = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: argv[2],
   });
 
   try {

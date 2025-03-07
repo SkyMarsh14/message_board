@@ -7,8 +7,7 @@ const formController = {
 
   post: async (req, res) => {
     const data = req.body;
-    const added = new Date();
-    await query.addUser(data.user_name, data.user_message, added);
+    await query.addUser(data.user_name, data.user_message);
     res.status(201).redirect("/");
   },
 };
